@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALsite", "DALsite\DALsite.csproj", "{9CC871C5-9154-4DCD-A3AA-6EED2DCF362E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLsite", "BLsite\BLsite.csproj", "{0D872116-7816-47F1-8FD5-6A9EBFB7B63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookForm", "BookForm\BookForm.csproj", "{AB51908F-6199-4901-9596-A2D7FDD1197E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CC871C5-9154-4DCD-A3AA-6EED2DCF362E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC871C5-9154-4DCD-A3AA-6EED2DCF362E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC871C5-9154-4DCD-A3AA-6EED2DCF362E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC871C5-9154-4DCD-A3AA-6EED2DCF362E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D872116-7816-47F1-8FD5-6A9EBFB7B63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D872116-7816-47F1-8FD5-6A9EBFB7B63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D872116-7816-47F1-8FD5-6A9EBFB7B63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D872116-7816-47F1-8FD5-6A9EBFB7B63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB51908F-6199-4901-9596-A2D7FDD1197E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB51908F-6199-4901-9596-A2D7FDD1197E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB51908F-6199-4901-9596-A2D7FDD1197E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB51908F-6199-4901-9596-A2D7FDD1197E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
