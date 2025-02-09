@@ -5,23 +5,22 @@ namespace DALsite
     public static class LibraryManager
     {
         // Ajoute un SpellBook dans la base de données.
-        public static void AddSpellBook(int serial, string title, MagicType typeOfMagic)
+        public static void AddSpellBook(int serial, string title,int value,  MagicType typeOfMagic)
         {
             using (var context = new LibraryContext())
             {
-                //var spellBook = new SpellBook { Serial = serial , Title = title, magicType = typeOfMagic }; 
-                var spellBook = new SpellBook( serial, title, typeOfMagic );
+                var spellBook = new SpellBook { Serial = serial , Title = title, Value = value ,  magicType = typeOfMagic }; 
                 context.SpellBooks?.Add(spellBook);
                 context.SaveChanges();
             }
         }
 
         // Ajoute un RecipeBook dans la base de données.
-        public static void AddRecipeBook(int serial, string title, int numberOfRecipes)
+        public static void AddRecipeBook(int serial, string title, int value, int numberOfRecipes)
         {
             using (var context = new LibraryContext())
             {
-                var recipeBook = new RecipeBook (  serial, title,  numberOfRecipes );
+                var recipeBook = new RecipeBook { Serial = serial, Title = title, Value = value, NumberOfRecipes = numberOfRecipes };
                 context.RecipeBooks?.Add(recipeBook);
                 context.SaveChanges();
             }

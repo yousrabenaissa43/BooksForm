@@ -8,7 +8,7 @@ namespace BLsite
 {
      public class RecipeBook : Book 
     {
-        public int NumberOfRecipes { get; private set; }
+        public int? NumberOfRecipes { get;  set; }
 
         public RecipeBook(int serial, string title, int numberOfRecipes) : base(serial, title)
         { 

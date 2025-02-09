@@ -9,11 +9,12 @@ namespace BLsite
 {
     public abstract class Book 
     {
-
         [Key]
-        public int Serial {  get; private set; }
-       public string? Title { get; private set; }
-        public int? Value { get; protected set; }
+
+        public int Id { get; set; }
+        public int Serial {  get;  set; }
+       public string? Title { get;  set; }
+        public int? Value { get;  set; }
 
         public Book(int serial, string title)
         {

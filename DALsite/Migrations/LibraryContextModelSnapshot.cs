@@ -23,13 +23,16 @@ namespace DALsite.Migrations
 
             modelBuilder.Entity("BLsite.RecipeBook", b =>
                 {
-                    b.Property<int>("Serial")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Serial"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("NumberOfRecipes")
+                    b.Property<int?>("NumberOfRecipes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Serial")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -38,18 +41,21 @@ namespace DALsite.Migrations
                     b.Property<int?>("Value")
                         .HasColumnType("int");
 
-                    b.HasKey("Serial");
+                    b.HasKey("Id");
 
                     b.ToTable("RecipeBooks");
                 });
 
             modelBuilder.Entity("BLsite.SpellBook", b =>
                 {
-                    b.Property<int>("Serial")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Serial"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Serial")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -57,10 +63,11 @@ namespace DALsite.Migrations
                     b.Property<int?>("Value")
                         .HasColumnType("int");
 
-                    b.Property<int>("magicType")
-                        .HasColumnType("int");
+                    b.Property<string>("magicType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Serial");
+                    b.HasKey("Id");
 
                     b.ToTable("SpellBooks");
                 });

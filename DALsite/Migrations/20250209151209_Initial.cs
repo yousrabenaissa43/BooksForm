@@ -14,30 +14,32 @@ namespace DALsite.Migrations
                 name: "RecipeBooks",
                 columns: table => new
                 {
-                    Serial = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NumberOfRecipes = table.Column<int>(type: "int", nullable: false),
+                    NumberOfRecipes = table.Column<int>(type: "int", nullable: true),
+                    Serial = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Value = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RecipeBooks", x => x.Serial);
+                    table.PrimaryKey("PK_RecipeBooks", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "SpellBooks",
                 columns: table => new
                 {
-                    Serial = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    magicType = table.Column<int>(type: "int", nullable: false),
+                    magicType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Serial = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Value = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SpellBooks", x => x.Serial);
+                    table.PrimaryKey("PK_SpellBooks", x => x.Id);
                 });
         }
 

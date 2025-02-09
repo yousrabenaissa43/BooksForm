@@ -8,7 +8,7 @@ namespace BLsite
 {
     public class SpellBook : Book
     {
-        public MagicType magicType {  get; private set; }
+        public MagicType magicType {  get;  set; }
 
       
         public SpellBook(int serial, string title, MagicType typeOfMagic) : base(serial, title)

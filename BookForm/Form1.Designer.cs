@@ -154,6 +154,7 @@
             btnAdd.Size = new Size(80, 30);
             btnAdd.TabIndex = 10;
             btnAdd.Text = "Add";
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnDisplay
             // 

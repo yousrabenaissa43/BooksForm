@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using BLsite; 
 
 namespace DALsite
@@ -13,7 +14,15 @@ namespace DALsite
             // Configure your connection string to the database
             optionsBuilder.UseSqlServer("server=(LocalDB)\\MSSQLLocalDB;Initial Catalog=BooksDB;Integrated Security=true");
         }
-    
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Apply EnumToStringConverter for the MagicType enum
+            modelBuilder.Entity<SpellBook>()
+                .Property(b => b.magicType)
+                .HasConversion(new EnumToStringConverter<MagicType>());
+        }
 
     }
 
