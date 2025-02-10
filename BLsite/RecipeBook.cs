@@ -19,7 +19,7 @@ namespace BLsite
         }
         public override string GetExtandedInfos()
         {
-            return base.getInfos() + $"contains {NumberOfRecipes} recipes" ;
+            return base.getInfos()+ $"contains {NumberOfRecipes} recipes" ;
         }
         public override void CalculatedExtandedValue()
         {

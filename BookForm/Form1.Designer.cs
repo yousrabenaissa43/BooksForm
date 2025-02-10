@@ -149,20 +149,24 @@
             // 
             // btnAdd
             // 
+            btnAdd.BackColor = Color.MistyRose;
             btnAdd.Location = new Point(300, 220);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(80, 30);
             btnAdd.TabIndex = 10;
             btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
             // btnDisplay
             // 
+            btnDisplay.BackColor = Color.MistyRose;
             btnDisplay.Location = new Point(400, 220);
             btnDisplay.Name = "btnDisplay";
             btnDisplay.Size = new Size(80, 30);
             btnDisplay.TabIndex = 11;
             btnDisplay.Text = "Display";
+            btnDisplay.UseVisualStyleBackColor = false;
             btnDisplay.Click += btnDisplay_Click;
             // 
             // gbSpellBook
@@ -189,6 +193,7 @@
             // 
             // Form1
             // 
+            BackColor = Color.LightSalmon;
             ClientSize = new Size(683, 420);
             Controls.Add(lbType);
             Controls.Add(cbType);
@@ -202,7 +207,9 @@
             Controls.Add(gbRecipeBook);
             Controls.Add(btnAdd);
             Controls.Add(btnDisplay);
+            ForeColor = SystemColors.ControlText;
             Name = "Form1";
+            RightToLeft = RightToLeft.No;
             Text = "Gargmel Library";
             gbSpellBook.ResumeLayout(false);
             gbSpellBook.PerformLayout();

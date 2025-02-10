@@ -55,43 +55,47 @@ namespace BookForm
             // Collect the book data from input controls (e.g., textboxes, dropdowns)
             int serial = int.Parse(tbSerial.Text); // Assuming you have a textbox for serial number
             string title = tbTitle.Text;
-            int value = int.Parse(tbValue.Text) ;       
+            int value = int.Parse(tbValue.Text);
 
             // Check if the type is SpellBook
             if (cbType.SelectedItem == "Spell Book")
             {
                 if (cbMagicType.SelectedItem != null) // Assuming a ComboBox for selecting MagicType
                 {
-                    
-                    if (cbMagicType.SelectedItem == MagicType.Enchantment.ToString())
+
+                    if (cbMagicType.SelectedItem == "Enchantment")
+                    {
 
                         LibraryManager.AddSpellBook(serial, title, value, MagicType.Enchantment);
+                        MessageBox.Show("Book added successfully!");
                     }
-                    if (cbMagicType.SelectedItem == MagicType.Cruse.ToString())
-                    {
-                    LibraryManager.AddSpellBook(serial, title, value,  MagicType.Cruse);
-                    }
-                    if (cbMagicType.SelectedItem == MagicType.Transmutation.ToString())
-                    {
-                    LibraryManager.AddSpellBook(serial, title, value , MagicType.Transmutation);
-                    
-                    MessageBox.Show("Book added successfully!");
-                }
-            }
-            else if (cbType.SelectedItem == "Recipe Book")
-            {
-                if (int.TryParse(tbNumRecipes.Text, out int recipes))
-                {
-                    
-                    LibraryManager.AddRecipeBook(serial, title, value, recipes);
-                    MessageBox.Show("Book added successfully!");
-                }
-            }
-            
 
-        }
+                    if (cbMagicType.SelectedItem == "Cruse")
+                    {
+                        LibraryManager.AddSpellBook(serial, title, value, MagicType.Cruse);
+                        MessageBox.Show("Book added successfully!");
+                    }
+                    if (cbMagicType.SelectedItem == "Transmutation")
+                    {
+                        LibraryManager.AddSpellBook(serial, title, value, MagicType.Transmutation);
+                        MessageBox.Show("Book added successfully!");
+                    }
+                }
+                else if (cbType.SelectedItem == "Recipe Book")
+                {
+                    if (int.TryParse(tbNumRecipes.Text, out int recipes))
+                    {
+
+                        LibraryManager.AddRecipeBook(serial, title, value, recipes);
+                        MessageBox.Show("Book added successfully!");
+                    }
+                }
+
+
+            }
 
         }
 
     }
+}
 

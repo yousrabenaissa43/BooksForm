@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstBooks = new System.Windows.Forms.ListBox();
-            this.SuspendLayout();
+            lstBooks = new ListBox();
+            SuspendLayout();
             // 
             // lstBooks
             // 
-            this.lstBooks.FormattingEnabled = true;
-            this.lstBooks.ItemHeight = 20;
-            this.lstBooks.Location = new System.Drawing.Point(12, 12);
-            this.lstBooks.Name = "lstBooks";
-            this.lstBooks.Size = new System.Drawing.Size(360, 264);
-            this.lstBooks.TabIndex = 0;
+            lstBooks.BackColor = Color.MistyRose;
+            lstBooks.FormattingEnabled = true;
+            lstBooks.Location = new Point(12, 15);
+            lstBooks.Margin = new Padding(3, 4, 3, 4);
+            lstBooks.Name = "lstBooks";
+            lstBooks.Size = new Size(360, 324);
+            lstBooks.TabIndex = 0;
             // 
             // DisplayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 281);
-            this.Controls.Add(this.lstBooks);
-            this.Name = "DisplayForm";
-            this.Text = "Display Books";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(384, 351);
+            Controls.Add(lstBooks);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "DisplayForm";
+            Text = "Display Books";
+            ResumeLayout(false);
         }
 
         #endregion

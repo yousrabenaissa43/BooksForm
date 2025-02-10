@@ -19,7 +19,7 @@ namespace BookForm
                
 
                 // Add the book details to the ListBox
-                lstBooks.Items.Add(book.getInfos());
+                lstBooks.Items.Add(book.GetExtandedInfos());
             }
         }
     }
