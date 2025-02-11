@@ -81,21 +81,35 @@ namespace BookForm
                         MessageBox.Show("Book added successfully!");
                     }
                 }
-                else if (cbType.SelectedItem == "Recipe Book")
-                {
-                    if (int.TryParse(tbNumRecipes.Text, out int recipes))
-                    {
+            }
+            else //if (cbType.SelectedItem == "Recipe Book")
+            {
 
-                        LibraryManager.AddRecipeBook(serial, title, value, recipes);
-                        MessageBox.Show("Book added successfully!");
-                    }
-                }
+                LibraryManager.AddRecipeBook(serial, title, value, int.Parse(tbNumRecipes.Text));
+                MessageBox.Show("Book added successfully!");
+
+            }
 
 
             }
 
+        
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string name = tbName.Text;
+            string title = tbBiography.Text;
+            LibraryManager.AddAuthor(name, title);
+            MessageBox.Show("Author added successfully!");
+
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<Author> authorList = LibraryManager.GetAuthors();
+            DisplayAuthorsForm displayForm = new DisplayAuthorsForm(authorList);
+            displayForm.Show();
+        }
     }
 }
 

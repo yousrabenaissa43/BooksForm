@@ -11,13 +11,7 @@ namespace BLsite
         public MagicType magicType {  get;  set; }
 
       
-        public SpellBook(int serial, string title, MagicType typeOfMagic) : base(serial, title)
-        { 
-            magicType = typeOfMagic;
-        }
-        public SpellBook() : base()
-        {
-        }
+      
         public override string GetExtandedInfos()
         {
            return  base.getInfos() + $"contains {magicType} spells" ; 

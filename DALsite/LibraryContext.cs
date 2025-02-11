@@ -8,6 +8,9 @@ namespace DALsite
     {
         public DbSet<SpellBook>? SpellBooks { get; set; }
         public DbSet<RecipeBook>? RecipeBooks { get; set; }
+        public DbSet<Author>? Authors { get; set; }
+        public DbSet<Loan>? Loans { get; set; }
+        public DbSet<LibraryMember>? LibraryMembers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

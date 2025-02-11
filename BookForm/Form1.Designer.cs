@@ -44,8 +44,16 @@
             btnDisplay = new Button();
             gbSpellBook = new GroupBox();
             gbRecipeBook = new GroupBox();
+            button3 = new Button();
+            button4 = new Button();
+            groupBox2 = new GroupBox();
+            label1 = new Label();
+            label4 = new Label();
+            tbBiography = new TextBox();
+            tbName = new TextBox();
             gbSpellBook.SuspendLayout();
             gbRecipeBook.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // lbType
@@ -191,10 +199,80 @@
             gbRecipeBook.TabStop = false;
             gbRecipeBook.Text = "Recipe Book";
             // 
+            // button3
+            // 
+            button3.BackColor = Color.MistyRose;
+            button3.Location = new Point(145, 482);
+            button3.Name = "button3";
+            button3.Size = new Size(80, 30);
+            button3.TabIndex = 23;
+            button3.Text = "Display";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.MistyRose;
+            button4.Location = new Point(45, 482);
+            button4.Name = "button4";
+            button4.Size = new Size(80, 30);
+            button4.TabIndex = 22;
+            button4.Text = "Add";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(tbBiography);
+            groupBox2.Controls.Add(tbName);
+            groupBox2.Location = new Point(36, 294);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(250, 182);
+            groupBox2.TabIndex = 20;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Author";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(10, 78);
+            label1.Name = "label1";
+            label1.Size = new Size(84, 20);
+            label1.TabIndex = 16;
+            label1.Text = "Biography :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(10, 29);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 20);
+            label4.TabIndex = 14;
+            label4.Text = "Name :";
+            // 
+            // tbBiography
+            // 
+            tbBiography.Location = new Point(100, 78);
+            tbBiography.Name = "tbBiography";
+            tbBiography.Size = new Size(120, 27);
+            tbBiography.TabIndex = 17;
+            // 
+            // tbName
+            // 
+            tbName.Location = new Point(100, 29);
+            tbName.Name = "tbName";
+            tbName.Size = new Size(120, 27);
+            tbName.TabIndex = 15;
+            // 
             // Form1
             // 
             BackColor = Color.LightSalmon;
-            ClientSize = new Size(683, 420);
+            ClientSize = new Size(933, 576);
+            Controls.Add(groupBox2);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(lbType);
             Controls.Add(cbType);
             Controls.Add(lbSerial);
@@ -215,6 +293,8 @@
             gbSpellBook.PerformLayout();
             gbRecipeBook.ResumeLayout(false);
             gbRecipeBook.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -226,5 +306,12 @@
         private System.Windows.Forms.TextBox tbSerial, tbTitle, tbValue, tbNumRecipes;
         private System.Windows.Forms.Button btnAdd, btnDisplay;
         private System.Windows.Forms.GroupBox gbSpellBook, gbRecipeBook;
+        private Button button3;
+        private Button button4;
+        private GroupBox groupBox2;
+        private Label label1;
+        private Label label4;
+        private TextBox tbBiography;
+        private TextBox tbName;
     }
 }

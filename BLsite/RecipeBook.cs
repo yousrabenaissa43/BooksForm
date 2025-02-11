@@ -10,13 +10,7 @@ namespace BLsite
     {
         public int? NumberOfRecipes { get;  set; }
 
-        public RecipeBook(int serial, string title, int numberOfRecipes) : base(serial, title)
-        { 
-            NumberOfRecipes = numberOfRecipes;
-        }
-        public RecipeBook() : base()
-        {
-        }
+      
         public override string GetExtandedInfos()
         {
             return base.getInfos()+ $"contains {NumberOfRecipes} recipes" ;

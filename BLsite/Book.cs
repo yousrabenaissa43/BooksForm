@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,15 +16,10 @@ namespace BLsite
         public int Serial {  get;  set; }
        public string? Title { get;  set; }
         public int? Value { get;  set; }
-
-        public Book(int serial, string title)
-        {
-            this.Serial = serial; 
-            this.Title = title;
-        }
-        public Book()
-        {
-        }
+        public int? AutourId {  get; set; }
+        [ForeignKey("AutourId")]
+      public virtual Author Author { get; set; }    
+      
 
         public string getInfos()
         {
