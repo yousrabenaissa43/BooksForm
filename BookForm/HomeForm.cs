@@ -25,14 +25,14 @@ namespace BookForm
 
         private void btnManageBooks_Click(object sender, EventArgs e)
         {
-            Form1 booksForm = new Form1();
+            Books booksForm = new Books();
             booksForm.ShowDialog();
         }
 
         private void btnManageAuthors_Click(object sender, EventArgs e)
         {
-           // AuthorsForm authorsForm = new AuthorsForm();
-           // authorsForm.ShowDialog();
+            Authors authorsForm = new Authors();
+            authorsForm.ShowDialog();
         }
     }
 }

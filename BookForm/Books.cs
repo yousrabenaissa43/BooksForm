@@ -5,9 +5,9 @@ using DALsite;
 
 namespace BookForm
 {
-    public partial class Form1 : Form
+    public partial class Books : Form
     {
-        public Form1()
+        public Books()
         {
             InitializeComponent();
 
@@ -95,27 +95,9 @@ namespace BookForm
 
 
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string name = tbName.Text;
-            string title = tbBiography.Text;
-            LibraryManager.AddAuthor(name, title);
-            MessageBox.Show("Author added successfully!");
+    
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            List<Author> authorList = LibraryManager.GetAuthors();
-            DisplayAuthorsForm displayForm = new DisplayAuthorsForm(authorList);
-            displayForm.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            LibraryMembers libraryMembers = new LibraryMembers();
-            libraryMembers.Show();
-        }
+      
     }
 }
 

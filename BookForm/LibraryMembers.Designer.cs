@@ -41,7 +41,7 @@
             // button1
             // 
             button1.BackColor = Color.MistyRose;
-            button1.Location = new Point(173, 252);
+            button1.Location = new Point(264, 252);
             button1.Name = "button1";
             button1.Size = new Size(80, 30);
             button1.TabIndex = 26;
@@ -52,7 +52,7 @@
             // button2
             // 
             button2.BackColor = Color.MistyRose;
-            button2.Location = new Point(73, 252);
+            button2.Location = new Point(136, 252);
             button2.Name = "button2";
             button2.Size = new Size(80, 30);
             button2.TabIndex = 25;
@@ -62,11 +62,13 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(lbEmail);
             groupBox1.Controls.Add(lbFullName);
             groupBox1.Controls.Add(tbEmail);
             groupBox1.Controls.Add(tbFullName);
-            groupBox1.Location = new Point(47, 35);
+            groupBox1.ForeColor = SystemColors.ButtonFace;
+            groupBox1.Location = new Point(101, 35);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(267, 211);
             groupBox1.TabIndex = 24;
@@ -85,6 +87,7 @@
             // lbFullName
             // 
             lbFullName.AutoSize = true;
+            lbFullName.BackColor = Color.Transparent;
             lbFullName.Location = new Point(10, 29);
             lbFullName.Name = "lbFullName";
             lbFullName.Size = new Size(79, 20);
@@ -109,7 +112,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.libMembers;
+            ClientSize = new Size(454, 316);
             Controls.Add(groupBox1);
             Controls.Add(button2);
             Controls.Add(button1);
