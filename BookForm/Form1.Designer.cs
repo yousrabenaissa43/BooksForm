@@ -31,14 +31,12 @@
             lbType = new Label();
             lbSerial = new Label();
             lbTitle = new Label();
-            lbValue = new Label();
             lbMagicType = new Label();
             lbNumRecipes = new Label();
             cbType = new ComboBox();
             cbMagicType = new ComboBox();
             tbSerial = new TextBox();
             tbTitle = new TextBox();
-            tbValue = new TextBox();
             tbNumRecipes = new TextBox();
             btnAdd = new Button();
             btnDisplay = new Button();
@@ -51,6 +49,7 @@
             label4 = new Label();
             tbBiography = new TextBox();
             tbName = new TextBox();
+            button1 = new Button();
             gbSpellBook.SuspendLayout();
             gbRecipeBook.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -82,15 +81,6 @@
             lbTitle.Size = new Size(45, 20);
             lbTitle.TabIndex = 4;
             lbTitle.Text = "Title :";
-            // 
-            // lbValue
-            // 
-            lbValue.AutoSize = true;
-            lbValue.Location = new Point(30, 150);
-            lbValue.Name = "lbValue";
-            lbValue.Size = new Size(52, 20);
-            lbValue.TabIndex = 6;
-            lbValue.Text = "Value :";
             // 
             // lbMagicType
             // 
@@ -140,13 +130,6 @@
             tbTitle.Name = "tbTitle";
             tbTitle.Size = new Size(150, 27);
             tbTitle.TabIndex = 5;
-            // 
-            // tbValue
-            // 
-            tbValue.Location = new Point(100, 147);
-            tbValue.Name = "tbValue";
-            tbValue.Size = new Size(150, 27);
-            tbValue.TabIndex = 7;
             // 
             // tbNumRecipes
             // 
@@ -266,10 +249,22 @@
             tbName.Size = new Size(120, 27);
             tbName.TabIndex = 15;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.MistyRose;
+            button1.Location = new Point(682, 494);
+            button1.Name = "button1";
+            button1.Size = new Size(168, 30);
+            button1.TabIndex = 24;
+            button1.Text = "Manage Library Members";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             BackColor = Color.LightSalmon;
             ClientSize = new Size(933, 576);
+            Controls.Add(button1);
             Controls.Add(groupBox2);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -279,8 +274,6 @@
             Controls.Add(tbSerial);
             Controls.Add(lbTitle);
             Controls.Add(tbTitle);
-            Controls.Add(lbValue);
-            Controls.Add(tbValue);
             Controls.Add(gbSpellBook);
             Controls.Add(gbRecipeBook);
             Controls.Add(btnAdd);
@@ -301,9 +294,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbType, lbSerial, lbTitle, lbValue, lbMagicType, lbNumRecipes;
+        private System.Windows.Forms.Label lbType, lbSerial, lbTitle,lbMagicType, lbNumRecipes;
         private System.Windows.Forms.ComboBox cbType, cbMagicType;
-        private System.Windows.Forms.TextBox tbSerial, tbTitle, tbValue, tbNumRecipes;
+        private System.Windows.Forms.TextBox tbSerial, tbTitle,  tbNumRecipes;
         private System.Windows.Forms.Button btnAdd, btnDisplay;
         private System.Windows.Forms.GroupBox gbSpellBook, gbRecipeBook;
         private Button button3;
@@ -313,5 +306,6 @@
         private Label label4;
         private TextBox tbBiography;
         private TextBox tbName;
+        private Button button1;
     }
 }

@@ -14,6 +14,11 @@ namespace BLsite
         public string FullName { get; set; }
         public string Email { get; set; }
 
+       public string GetInfos()
+        {
+            return $"Library Member with Full Name {FullName} , Email \" {Email}\"\r\n";
+        }
+
 
     }
 }

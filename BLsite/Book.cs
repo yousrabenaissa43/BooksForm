@@ -18,7 +18,7 @@ namespace BLsite
         public int? Value { get;  set; }
         public int? AutourId {  get; set; }
         [ForeignKey("AutourId")]
-      public virtual Author Author { get; set; }    
+      public virtual Author Author { get; set; }  
       
 
         public string getInfos()

@@ -1,6 +1,6 @@
 ﻿namespace BookForm
 {
-    partial class DisplayForm
+    partial class DiplayFormLibMembers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lstBooks = new ListBox();
+            lstLibMembers = new ListBox();
             SuspendLayout();
             // 
             // lstBooks
             // 
-            lstBooks.BackColor = Color.MistyRose;
-            lstBooks.FormattingEnabled = true;
-            lstBooks.Location = new Point(12, 14);
-            lstBooks.Margin = new Padding(3, 4, 3, 4);
-            lstBooks.Name = "lstBooks";
-            lstBooks.Size = new Size(693, 324);
-            lstBooks.TabIndex = 0;
+            lstLibMembers.BackColor = Color.MistyRose;
+            lstLibMembers.FormattingEnabled = true;
+            lstLibMembers.Location = new Point(12, 14);
+            lstLibMembers.Margin = new Padding(3, 4, 3, 4);
+            lstLibMembers.Name = "lstBooks";
+            lstLibMembers.Size = new Size(693, 324);
+            lstLibMembers.TabIndex = 0;
             // 
             // DisplayForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(717, 351);
-            Controls.Add(lstBooks);
+            Controls.Add(lstLibMembers);
             Margin = new Padding(3, 4, 3, 4);
             Name = "DisplayForm";
             Text = "Display Books";
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstBooks;
+        private System.Windows.Forms.ListBox lstLibMembers;
     }
 }

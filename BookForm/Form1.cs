@@ -55,7 +55,7 @@ namespace BookForm
             // Collect the book data from input controls (e.g., textboxes, dropdowns)
             int serial = int.Parse(tbSerial.Text); // Assuming you have a textbox for serial number
             string title = tbTitle.Text;
-            int value = int.Parse(tbValue.Text);
+
 
             // Check if the type is SpellBook
             if (cbType.SelectedItem == "Spell Book")
@@ -66,18 +66,18 @@ namespace BookForm
                     if (cbMagicType.SelectedItem == "Enchantment")
                     {
 
-                        LibraryManager.AddSpellBook(serial, title, value, MagicType.Enchantment);
+                        LibraryManager.AddSpellBook(serial, title, MagicType.Enchantment);
                         MessageBox.Show("Book added successfully!");
                     }
 
                     if (cbMagicType.SelectedItem == "Cruse")
                     {
-                        LibraryManager.AddSpellBook(serial, title, value, MagicType.Cruse);
+                        LibraryManager.AddSpellBook(serial, title, MagicType.Cruse);
                         MessageBox.Show("Book added successfully!");
                     }
                     if (cbMagicType.SelectedItem == "Transmutation")
                     {
-                        LibraryManager.AddSpellBook(serial, title, value, MagicType.Transmutation);
+                        LibraryManager.AddSpellBook(serial, title, MagicType.Transmutation);
                         MessageBox.Show("Book added successfully!");
                     }
                 }
@@ -85,15 +85,15 @@ namespace BookForm
             else //if (cbType.SelectedItem == "Recipe Book")
             {
 
-                LibraryManager.AddRecipeBook(serial, title, value, int.Parse(tbNumRecipes.Text));
+                LibraryManager.AddRecipeBook(serial, title, int.Parse(tbNumRecipes.Text));
                 MessageBox.Show("Book added successfully!");
 
             }
 
 
-            }
+        }
 
-        
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -109,6 +109,12 @@ namespace BookForm
             List<Author> authorList = LibraryManager.GetAuthors();
             DisplayAuthorsForm displayForm = new DisplayAuthorsForm(authorList);
             displayForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LibraryMembers libraryMembers = new LibraryMembers();
+            libraryMembers.Show();
         }
     }
 }
