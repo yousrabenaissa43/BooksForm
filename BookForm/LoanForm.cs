@@ -9,15 +9,59 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLsite;
 using DALsite;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookForm
 {
     public partial class LoanForm : Form
     {
+        private LibraryContext _context = new LibraryContext(); // Your EF DbContext
         public LoanForm()
         {
             InitializeComponent();
+            LoadBooks();
+            LoadMembers();
         }
+
+        //load books in the combobox 
+        private void LoadBooks()
+        {
+            var recipeBooks = _context.RecipeBooks
+                              .Select(b => new { b.Id, Title = "Recipe Book: " + b.Title })
+                              .ToList();
+
+            var spellBooks = _context.SpellBooks
+                                     .Select(b => new { b.Id, Title = "Spell Book: " + b.Title })
+                                     .ToList();
+
+            // Merge both lists
+            var allBooks = recipeBooks.Concat(spellBooks).ToList();
+
+            // Bind to ComboBox
+            cmbBooks.DataSource = allBooks;
+            cmbBooks.DisplayMember = "Title";  // User sees "Recipe: BookName" or "Spell: BookName"
+            cmbBooks.ValueMember = "Id";   // Internal value remains the BookId
+        }
+        //load lib members in the combobox 
+        private void LoadMembers()
+        {
+            var members = _context.LibraryMembers
+                                  .Select(m => new { Id = m.MemberId, Name = m.FullName })
+                                  .ToList();
+
+            // Debug to verify data
+            if (members.Count == 0)
+            {
+                MessageBox.Show("No library members found in the database.");
+                return;
+            }
+
+            // Bind to ComboBox
+            cmbMembers.DataSource = members;
+            cmbMembers.DisplayMember = "Name";  // What user sees
+            cmbMembers.ValueMember = "Id";      // Internal value used
+        }
+
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -38,6 +82,7 @@ namespace BookForm
             DisplayLoans displayForm = new DisplayLoans(LoansList);
             displayForm.Show();
         }
-       
+
+        
     }
 }

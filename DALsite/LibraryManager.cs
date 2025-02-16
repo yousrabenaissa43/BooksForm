@@ -1,5 +1,6 @@
 ﻿
-using BLsite ; 
+using BLsite ;
+using Microsoft.EntityFrameworkCore;
 namespace DALsite
 {
     public static class LibraryManager
@@ -123,9 +124,13 @@ namespace DALsite
         {
             using (var context = new LibraryContext())
             {
-                return context.Loans.ToList();
+                return context.Loans
+                    .Include(l => l.Book)             // Ensure Book is loaded
+                    .Include(l => l.LibraryMember)    // Ensure LibraryMember is loaded
+                    .ToList();
             }
         }
+
 
         // Récupère tous les livres (SpellBooks et RecipeBooks) de la base de données.
         public static List<Book> GetAllBooks()

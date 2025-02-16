@@ -24,7 +24,7 @@ namespace BLsite
         public DateTime? ReturnDate { get; set; }
 
         // Propriétés de navigation
-        [ForeignKey("Id")]
+        [ForeignKey("BookId")]
         public virtual Book Book { get; set; }
 
         [ForeignKey("MemberId")]

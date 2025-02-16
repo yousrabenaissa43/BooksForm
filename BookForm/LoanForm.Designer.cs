@@ -94,6 +94,7 @@
             cmbBooks.Name = "cmbBooks";
             cmbBooks.Size = new Size(296, 28);
             cmbBooks.TabIndex = 1;
+           
             // 
             // label4
             // 

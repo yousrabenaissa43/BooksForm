@@ -11,7 +11,7 @@ using BLsite;
 
 namespace BookForm
 {
-    public partial class DisplayLoans: Form
+    public partial class DisplayLoans : Form
     {
         public DisplayLoans(List<Loan> Loans)
         {
@@ -27,5 +27,7 @@ namespace BookForm
                 lstLoans.Items.Add(loan.getInfos());
             }
         }
+
+        
     }
 }

@@ -11,7 +11,6 @@ namespace BLsite
     public abstract class Book 
     {
         [Key]
-
         public int Id { get; set; }
         public int Serial {  get;  set; }
        public string? Title { get;  set; }

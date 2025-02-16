@@ -26,29 +26,29 @@
             lstLoans = new ListBox();
             SuspendLayout();
             // 
-            // lstBooks
+            // lstLoans
             // 
             lstLoans.BackColor = Color.MistyRose;
             lstLoans.FormattingEnabled = true;
             lstLoans.Location = new Point(12, 15);
             lstLoans.Margin = new Padding(3, 4, 3, 4);
-            lstLoans.Name = "lstBooks";
-            lstLoans.Size = new Size(360, 324);
+            lstLoans.Name = "lstLoans";
+            lstLoans.Size = new Size(1219, 444);
             lstLoans.TabIndex = 0;
             // 
-            // DisplayForm
+            // DisplayLoans
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(384, 351);
+            ClientSize = new Size(1243, 481);
             Controls.Add(lstLoans);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "DisplayForm";
+            Name = "DisplayLoans";
             Text = "Display Books";
             ResumeLayout(false);
         }
-        
-          #endregion
+
+        #endregion
 
         private System.Windows.Forms.ListBox lstLoans;
     }
