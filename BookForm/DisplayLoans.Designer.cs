@@ -1,6 +1,6 @@
 ﻿namespace BookForm
 {
-    partial class DisplayForm
+    partial class DisplayLoans
     {
         /// <summary>
         /// Required designer variable.
@@ -21,39 +21,34 @@
         }
 
         #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            lstBooks = new ListBox();
+            lstLoans = new ListBox();
             SuspendLayout();
             // 
             // lstBooks
             // 
-            lstBooks.BackColor = Color.MistyRose;
-            lstBooks.FormattingEnabled = true;
-            lstBooks.Location = new Point(12, 14);
-            lstBooks.Margin = new Padding(3, 4, 3, 4);
-            lstBooks.Name = "lstBooks";
-            lstBooks.Size = new Size(693, 324);
-            lstBooks.TabIndex = 0;
+            lstLoans.BackColor = Color.MistyRose;
+            lstLoans.FormattingEnabled = true;
+            lstLoans.Location = new Point(12, 15);
+            lstLoans.Margin = new Padding(3, 4, 3, 4);
+            lstLoans.Name = "lstBooks";
+            lstLoans.Size = new Size(360, 324);
+            lstLoans.TabIndex = 0;
             // 
             // DisplayForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(717, 351);
-            Controls.Add(lstBooks);
+            ClientSize = new Size(384, 351);
+            Controls.Add(lstLoans);
             Margin = new Padding(3, 4, 3, 4);
             Name = "DisplayForm";
             Text = "Display Books";
             ResumeLayout(false);
         }
-
-        #endregion
+        
+          #endregion
 
         private System.Windows.Forms.ListBox lstLoans;
     }

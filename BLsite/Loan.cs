@@ -29,6 +29,17 @@ namespace BLsite
 
         [ForeignKey("MemberId")]
         public virtual LibraryMember LibraryMember { get; set; }
+
+        public string getInfos()
+        {
+            return $"Loan ID: {LoanId}, " +
+                   $"Book ID: {BookId} ({Book?.Title ?? "Unknown"}), " +
+                   $"Member ID: {MemberId} ({LibraryMember?.FullName ?? "Unknown"}), " +
+                   $"Loan Date: {LoanDate:yyyy-MM-dd}, " +
+                   $"Due Date: {DueDate:yyyy-MM-dd}, " +
+                   $"Return Date: {(ReturnDate.HasValue ? ReturnDate.Value.ToString("yyyy-MM-dd") : "Not Returned")}";
+        }
+
     }
 }
 
