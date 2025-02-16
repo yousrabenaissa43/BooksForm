@@ -23,6 +23,7 @@
             btnManageMembers = new Button();
             btnManageBooks = new Button();
             btnManageAuthors = new Button();
+            btnManageLoans = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -48,7 +49,7 @@
             // 
             // btnManageBooks
             // 
-            btnManageBooks.Location = new Point(288, 205);
+            btnManageBooks.Location = new Point(288, 186);
             btnManageBooks.Name = "btnManageBooks";
             btnManageBooks.Size = new Size(200, 40);
             btnManageBooks.TabIndex = 2;
@@ -57,17 +58,27 @@
             // 
             // btnManageAuthors
             // 
-            btnManageAuthors.Location = new Point(288, 302);
+            btnManageAuthors.Location = new Point(288, 251);
             btnManageAuthors.Name = "btnManageAuthors";
             btnManageAuthors.Size = new Size(200, 40);
             btnManageAuthors.TabIndex = 3;
             btnManageAuthors.Text = "Manage Authors";
             btnManageAuthors.Click += btnManageAuthors_Click;
             // 
+            // btnManageLoans
+            // 
+            btnManageLoans.Location = new Point(288, 327);
+            btnManageLoans.Name = "btnManageLoans";
+            btnManageLoans.Size = new Size(200, 40);
+            btnManageLoans.TabIndex = 4;
+            btnManageLoans.Text = "Manage Loans";
+            btnManageLoans.Click += btnManageLoans_Click;
+            // 
             // HomeForm
             // 
             BackgroundImage = Properties.Resources.lib;
-            ClientSize = new Size(790, 478);
+            ClientSize = new Size(790, 444);
+            Controls.Add(btnManageLoans);
             Controls.Add(lblTitle);
             Controls.Add(btnManageMembers);
             Controls.Add(btnManageBooks);
@@ -79,5 +90,6 @@
             ResumeLayout(false);
             PerformLayout();
         }
+        private Button btnManageLoans;
     }
 }

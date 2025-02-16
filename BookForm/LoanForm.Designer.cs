@@ -3,7 +3,6 @@
     partial class LoanForm
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Button btnDisplay;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -23,7 +22,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnDisplay = new Button();
             button1 = new Button();
             dateTimePicker1 = new DateTimePicker();
             label1 = new Label();
@@ -33,16 +31,8 @@
             label3 = new Label();
             cmbBooks = new ComboBox();
             label4 = new Label();
+            btnDisplay = new Button();
             SuspendLayout();
-            // 
-            // btnDisplay
-            // 
-            btnDisplay.Location = new Point(424, 396);
-            btnDisplay.Name = "btnDisplay";
-            btnDisplay.Size = new Size(75, 30);
-            btnDisplay.TabIndex = 8;
-            btnDisplay.Text = "Display";
-            btnDisplay.Click += btnSubmit_Click;
             // 
             // button1
             // 
@@ -113,10 +103,21 @@
             label4.TabIndex = 0;
             label4.Text = "Select Book:";
             // 
+            // btnDisplay
+            // 
+            btnDisplay.Location = new Point(435, 396);
+            btnDisplay.Name = "btnDisplay";
+            btnDisplay.Size = new Size(83, 29);
+            btnDisplay.TabIndex = 9;
+            btnDisplay.Text = "Display";
+            btnDisplay.UseVisualStyleBackColor = true;
+            btnDisplay.Click += btnDisplay_Click;
+            // 
             // LoanForm
             // 
             BackgroundImage = Properties.Resources.ee1d5fe2_4adc_45ca_bd69_e735d5aff231;
             ClientSize = new Size(998, 524);
+            Controls.Add(btnDisplay);
             Controls.Add(label4);
             Controls.Add(cmbBooks);
             Controls.Add(label3);
@@ -126,7 +127,6 @@
             Controls.Add(label1);
             Controls.Add(dateTimePicker1);
             Controls.Add(button1);
-            Controls.Add(btnDisplay);
             Name = "LoanForm";
             Text = "New Loan";
             ResumeLayout(false);
@@ -140,5 +140,6 @@
         private Label label3;
         private ComboBox cmbBooks;
         private Label label4;
+        private Button btnDisplay;
     }
 }

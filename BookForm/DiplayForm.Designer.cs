@@ -55,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstLoans;
+        private System.Windows.Forms.ListBox lstBooks;
     }
 }

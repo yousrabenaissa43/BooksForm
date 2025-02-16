@@ -34,5 +34,11 @@ namespace BookForm
             Authors authorsForm = new Authors();
             authorsForm.ShowDialog();
         }
+
+        private void btnManageLoans_Click(object sender, EventArgs e)
+        {
+            LoanForm loanForm = new LoanForm();
+            loanForm.ShowDialog();
+        }
     }
 }
