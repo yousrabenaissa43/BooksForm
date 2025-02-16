@@ -83,6 +83,16 @@ namespace BookForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ee1d5fe2_4adc_45ca_bd69_e735d5aff231 {
+            get {
+                object obj = ResourceManager.GetObject("ee1d5fe2-4adc-45ca-bd69-e735d5aff231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lib {
             get {
                 object obj = ResourceManager.GetObject("lib", resourceCulture);
@@ -96,6 +106,16 @@ namespace BookForm.Properties {
         internal static System.Drawing.Bitmap libMembers {
             get {
                 object obj = ResourceManager.GetObject("libMembers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap library_with_round_window_bookcase_with_bookcase_left {
+            get {
+                object obj = ResourceManager.GetObject("library-with-round-window-bookcase-with-bookcase-left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
