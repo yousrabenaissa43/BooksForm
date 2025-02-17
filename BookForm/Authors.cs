@@ -19,25 +19,30 @@ namespace BookForm
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            string name = tbName.Text;
-            string title = tbBiography.Text;
-            LibraryManager.AddAuthor(name, title);
-            MessageBox.Show("Author added successfully!");
+            
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDisplay_Click_1(object sender, EventArgs e)
         {
             List<Author> authorList = LibraryManager.GetAuthors();
             DisplayAuthorsForm displayForm = new DisplayAuthorsForm(authorList);
             displayForm.Show();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
-
+            string name = tbName.Text;
+            string title = tbBiography.Text;
+            LibraryManager.AddAuthor(name, title);
+            MessageBox.Show("Author added successfully!");
         }
     }
 }

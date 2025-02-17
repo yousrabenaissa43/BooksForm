@@ -33,8 +33,8 @@
             label4 = new Label();
             tbBiography = new TextBox();
             tbName = new TextBox();
-            button4 = new Button();
-            button3 = new Button();
+            btnAdd = new Button();
+            btnDisplay = new Button();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
@@ -85,26 +85,27 @@
             tbName.Size = new Size(120, 27);
             tbName.TabIndex = 15;
             // 
-            // button4
+            // btnAdd
             // 
-            button4.BackColor = Color.MistyRose;
-            button4.Location = new Point(211, 285);
-            button4.Name = "button4";
-            button4.Size = new Size(80, 30);
-            button4.TabIndex = 25;
-            button4.Text = "Add";
-            button4.UseVisualStyleBackColor = false;
+            btnAdd.BackColor = Color.MistyRose;
+            btnAdd.Location = new Point(211, 285);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(80, 30);
+            btnAdd.TabIndex = 25;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click_1;
             // 
-            // button3
+            // btnDisplay
             // 
-            button3.BackColor = Color.MistyRose;
-            button3.Location = new Point(337, 285);
-            button3.Name = "button3";
-            button3.Size = new Size(80, 30);
-            button3.TabIndex = 26;
-            button3.Text = "Display";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
+            btnDisplay.BackColor = Color.MistyRose;
+            btnDisplay.Location = new Point(337, 285);
+            btnDisplay.Name = "btnDisplay";
+            btnDisplay.Size = new Size(80, 30);
+            btnDisplay.TabIndex = 26;
+            btnDisplay.Text = "Display";
+            btnDisplay.UseVisualStyleBackColor = false;
+            btnDisplay.Click += btnDisplay_Click_1;
             // 
             // Authors
             // 
@@ -113,8 +114,8 @@
             BackgroundImage = Properties.Resources.authors;
             ClientSize = new Size(673, 359);
             Controls.Add(groupBox2);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(btnAdd);
+            Controls.Add(btnDisplay);
             Name = "Authors";
             Text = "Authors";
             groupBox2.ResumeLayout(false);
@@ -129,7 +130,7 @@
         private Label label4;
         private TextBox tbBiography;
         private TextBox tbName;
-        private Button button4;
-        private Button button3;
+        private Button btnAdd;
+        private Button btnDisplay;
     }
 }
