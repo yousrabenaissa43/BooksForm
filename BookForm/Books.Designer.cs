@@ -42,6 +42,8 @@
             btnDisplay = new Button();
             gbSpellBook = new GroupBox();
             gbRecipeBook = new GroupBox();
+            lblAuthor = new Label();
+            cmbAuthors = new ComboBox();
             gbSpellBook.SuspendLayout();
             gbRecipeBook.SuspendLayout();
             SuspendLayout();
@@ -51,7 +53,7 @@
             lbType.AutoSize = true;
             lbType.BackColor = Color.Transparent;
             lbType.ForeColor = SystemColors.Control;
-            lbType.Location = new Point(30, 30);
+            lbType.Location = new Point(120, 25);
             lbType.Name = "lbType";
             lbType.Size = new Size(47, 20);
             lbType.TabIndex = 0;
@@ -62,7 +64,7 @@
             lbSerial.AutoSize = true;
             lbSerial.BackColor = Color.Transparent;
             lbSerial.ForeColor = SystemColors.Control;
-            lbSerial.Location = new Point(30, 70);
+            lbSerial.Location = new Point(120, 70);
             lbSerial.Name = "lbSerial";
             lbSerial.Size = new Size(53, 20);
             lbSerial.TabIndex = 2;
@@ -73,7 +75,7 @@
             lbTitle.AutoSize = true;
             lbTitle.BackColor = Color.Transparent;
             lbTitle.ForeColor = SystemColors.Control;
-            lbTitle.Location = new Point(30, 110);
+            lbTitle.Location = new Point(120, 127);
             lbTitle.Name = "lbTitle";
             lbTitle.Size = new Size(45, 20);
             lbTitle.TabIndex = 4;
@@ -82,7 +84,7 @@
             // lbMagicType
             // 
             lbMagicType.AutoSize = true;
-            lbMagicType.Location = new Point(10, 30);
+            lbMagicType.Location = new Point(6, 30);
             lbMagicType.Name = "lbMagicType";
             lbMagicType.Size = new Size(90, 20);
             lbMagicType.TabIndex = 0;
@@ -101,7 +103,7 @@
             // 
             cbType.FormattingEnabled = true;
             cbType.Items.AddRange(new object[] { "Spell Book", "Recipe Book" });
-            cbType.Location = new Point(100, 27);
+            cbType.Location = new Point(191, 22);
             cbType.Name = "cbType";
             cbType.Size = new Size(150, 28);
             cbType.TabIndex = 1;
@@ -116,14 +118,14 @@
             // 
             // tbSerial
             // 
-            tbSerial.Location = new Point(100, 67);
+            tbSerial.Location = new Point(191, 67);
             tbSerial.Name = "tbSerial";
             tbSerial.Size = new Size(150, 27);
             tbSerial.TabIndex = 3;
             // 
             // tbTitle
             // 
-            tbTitle.Location = new Point(100, 107);
+            tbTitle.Location = new Point(191, 124);
             tbTitle.Name = "tbTitle";
             tbTitle.Size = new Size(150, 27);
             tbTitle.TabIndex = 5;
@@ -138,7 +140,7 @@
             // btnAdd
             // 
             btnAdd.BackColor = Color.MistyRose;
-            btnAdd.Location = new Point(300, 220);
+            btnAdd.Location = new Point(408, 262);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(80, 30);
             btnAdd.TabIndex = 10;
@@ -149,7 +151,7 @@
             // btnDisplay
             // 
             btnDisplay.BackColor = Color.MistyRose;
-            btnDisplay.Location = new Point(400, 220);
+            btnDisplay.Location = new Point(515, 262);
             btnDisplay.Name = "btnDisplay";
             btnDisplay.Size = new Size(80, 30);
             btnDisplay.TabIndex = 11;
@@ -163,7 +165,7 @@
             gbSpellBook.Controls.Add(lbMagicType);
             gbSpellBook.Controls.Add(cbMagicType);
             gbSpellBook.ForeColor = SystemColors.ButtonHighlight;
-            gbSpellBook.Location = new Point(300, 20);
+            gbSpellBook.Location = new Point(375, 14);
             gbSpellBook.Name = "gbSpellBook";
             gbSpellBook.Size = new Size(250, 80);
             gbSpellBook.TabIndex = 8;
@@ -176,18 +178,38 @@
             gbRecipeBook.Controls.Add(lbNumRecipes);
             gbRecipeBook.Controls.Add(tbNumRecipes);
             gbRecipeBook.ForeColor = SystemColors.ButtonHighlight;
-            gbRecipeBook.Location = new Point(300, 124);
+            gbRecipeBook.Location = new Point(375, 124);
             gbRecipeBook.Name = "gbRecipeBook";
             gbRecipeBook.Size = new Size(250, 80);
             gbRecipeBook.TabIndex = 9;
             gbRecipeBook.TabStop = false;
             gbRecipeBook.Text = "Recipe Book";
             // 
+            // lblAuthor
+            // 
+            lblAuthor.BackColor = Color.Transparent;
+            lblAuthor.ForeColor = SystemColors.ControlLightLight;
+            lblAuthor.Location = new Point(120, 188);
+            lblAuthor.Name = "lblAuthor";
+            lblAuthor.Size = new Size(59, 23);
+            lblAuthor.TabIndex = 12;
+            lblAuthor.Text = "Author :";
+            // 
+            // cmbAuthors
+            // 
+            cmbAuthors.Location = new Point(191, 185);
+            cmbAuthors.Name = "cmbAuthors";
+            cmbAuthors.Size = new Size(150, 28);
+            cmbAuthors.TabIndex = 13;
+            cmbAuthors.SelectedIndexChanged += cmbAuthors_SelectedIndexChanged;
+            // 
             // Books
             // 
             BackColor = Color.LightSalmon;
             BackgroundImage = Properties.Resources.books;
-            ClientSize = new Size(649, 383);
+            ClientSize = new Size(667, 383);
+            Controls.Add(lblAuthor);
+            Controls.Add(cmbAuthors);
             Controls.Add(lbType);
             Controls.Add(cbType);
             Controls.Add(lbSerial);
@@ -217,5 +239,7 @@
         private System.Windows.Forms.TextBox tbSerial, tbTitle,  tbNumRecipes;
         private System.Windows.Forms.Button btnAdd, btnDisplay;
         private System.Windows.Forms.GroupBox gbSpellBook, gbRecipeBook;
+        private Label lblAuthor;
+        private ComboBox cmbAuthors;
     }
 }

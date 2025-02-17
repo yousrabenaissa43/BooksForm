@@ -15,16 +15,18 @@ namespace BLsite
         public int Serial {  get;  set; }
        public string? Title { get;  set; }
         public int? Value { get;  set; }
-        public int? AutourId {  get; set; }
-        [ForeignKey("AutourId")]
-      public virtual Author Author { get; set; }  
-      
+        public int? AuthorId {  get; set; }
+        [ForeignKey("AuthorId ")]
+      public virtual Author Author { get; set; }
+
 
         public string getInfos()
         {
-            return $"Book with serial {Serial} , titled \" {Title}\"\r\n"; 
+            return $"Book Details: Serial {Serial}, Title \"{Title ?? "Unknown Title"}\", " +
+                   $"Author: {Author?.Name ?? "Unknown Author"}, Value: {Value?.ToString() ?? "N/A"}";
         }
-        
+
+
         public void CalculatedValue()
         {
             int wordCount = Title.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;

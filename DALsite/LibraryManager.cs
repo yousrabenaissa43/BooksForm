@@ -6,28 +6,61 @@ namespace DALsite
     public static class LibraryManager
     {
         // Ajoute un SpellBook dans la base de données.
-        public static void AddSpellBook(int serial, string title, MagicType typeOfMagic)
+        public static void AddSpellBook(int serial, string title, MagicType typeOfMagic, int authorId)
         {
             using (var context = new LibraryContext())
             {
-                var spellBook = new SpellBook { Serial = serial , Title = title,  magicType = typeOfMagic }; 
+                // Find the Author
+                var author = context.Authors.Find(authorId);
+                if (author == null)
+                {
+                    throw new ArgumentException("Invalid author ID.");
+                }
+
+                var spellBook = new SpellBook
+                {
+                    Serial = serial,
+                    Title = title,
+                    magicType = typeOfMagic,
+                    AuthorId = authorId,
+                   
+                };
+
+                // Add to DB Context
                 context.SpellBooks?.Add(spellBook);
+                context.SaveChanges();
+
+                // Call after saving, in case it needs saved data
                 spellBook.CalculatedExtandedValue();
                 context.SaveChanges();
             }
         }
 
-        // Ajoute un RecipeBook dans la base de données.
-        public static void AddRecipeBook(int serial, string title,  int numberOfRecipes)
+        // Add a RecipeBook to the database
+        public static void AddRecipeBook(int serial, string title, int numberOfRecipes, int authorId)
         {
             using (var context = new LibraryContext())
             {
-                var recipeBook = new RecipeBook { Serial = serial, Title = title, NumberOfRecipes = numberOfRecipes };
-                recipeBook.CalculatedExtandedValue();
+
+                var recipeBook = new RecipeBook
+                {
+                    Serial = serial,
+                    Title = title,
+                    NumberOfRecipes = numberOfRecipes,
+                    AuthorId = authorId,
+                   
+                };
+
+                // Add to DB Context
                 context.RecipeBooks?.Add(recipeBook);
+                context.SaveChanges();
+
+                // Call after saving
+                recipeBook.CalculatedExtandedValue();
                 context.SaveChanges();
             }
         }
+
         /// Ajoute un livre (SpellBook ou RecipeBook) en fonction des paramètres.
         public static void AddBook(int serial, string title,int value, MagicType? typeOfMagic, int? numberOfRecipes)
         {
