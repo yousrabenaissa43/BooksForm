@@ -12,7 +12,7 @@ using DALsite;
 
 namespace BookForm
 {
-    public partial class Authors: Form
+    public partial class Authors : Form
     {
         public Authors()
         {
@@ -33,6 +33,11 @@ namespace BookForm
             List<Author> authorList = LibraryManager.GetAuthors();
             DisplayAuthorsForm displayForm = new DisplayAuthorsForm(authorList);
             displayForm.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

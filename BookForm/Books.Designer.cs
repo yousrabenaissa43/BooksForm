@@ -201,7 +201,6 @@
             cmbAuthors.Name = "cmbAuthors";
             cmbAuthors.Size = new Size(150, 28);
             cmbAuthors.TabIndex = 13;
-            cmbAuthors.SelectedIndexChanged += cmbAuthors_SelectedIndexChanged;
             // 
             // Books
             // 

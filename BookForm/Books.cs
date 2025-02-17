@@ -87,12 +87,8 @@ namespace BookForm
             }
 
             string title = tbTitle.Text;
-
-            // Get the selected Author from the ComboBox
-            if (cmbAuthors.SelectedItem is Author selectedAuthor)
-            {
-                int authorId = selectedAuthor.AuthorId; // Extract Author ID
-
+            int authorId = Convert.ToInt32(cmbAuthors.SelectedValue);
+            
                 // Check if the selected type is "Spell Book"
                 if (cbType.SelectedItem?.ToString() == "Spell Book")
                 {
@@ -138,13 +134,10 @@ namespace BookForm
                     MessageBox.Show("Recipe Book added successfully!");
                 }
             }
-            else
-            {
-                MessageBox.Show("Please select an author!");
-            }
+           
         }
 
        
     }
-}
+
 

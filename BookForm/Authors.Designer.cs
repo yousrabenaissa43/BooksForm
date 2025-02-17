@@ -104,6 +104,7 @@
             button3.TabIndex = 26;
             button3.Text = "Display";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // Authors
             // 
